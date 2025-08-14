@@ -1,6 +1,6 @@
 # Indroduction
 
-The Automatic Windows Installer is made for Windows 11 and all of the Debian Linux based OS
+The Automatic Windows/Linux Installer is made for Windows 11 and all of the Debian Linux based OS
 
 To set it up, select your OS's Folder
 
