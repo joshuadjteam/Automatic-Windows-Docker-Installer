@@ -17,12 +17,46 @@ Run "docker compose up -d"
 -----------------------Debian Linux 
 
 sudo su
+
 sudo apt update -y && sudo apt upgrade -y
+
 sudo apt install docker.io docker-compose
+
 mkdir dockercom
+
 cd dockercom
+
 vim docker-compose.yml
+
 -Copy your code from your yml file
+
+----------------------Debian Online
+
+sudo su
+
+sudo apt update -y && sudo apt upgrade -y
+
+cd ~
+
+mkdir dockercom
+
+cd dockercom
+
+wget https://github.com/joshuadjteam/Automatic-Windows-Docker-Installer/releases/download/Docker/AutoDocker.zip
+
+unzip AutoDocker.zip
+
+apt install docker.io
+
+apt install docker.io docker-compose
+
+cd AutoDocker
+
+##### If your OS has a space, do start it with a ' and end it with a '
+
+docker-compose -f docker-compose.yml up -d
+
+##### Now enjoy, access your VM by the port, read readme.txt in the zip file for the ports
 
 ----------------------Access Your VM
 
