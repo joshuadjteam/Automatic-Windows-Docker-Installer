@@ -52,6 +52,10 @@ apt install docker.io docker-compose
 
 cd AutoDocker
 
+sudo apt-get install python3-pip
+
+python3 -m pip install setuptools --break-system-packages
+
 ##### If your OS has a space, do start it with a ' and end it with a '
 
 docker-compose -f docker-compose.yml up -d
