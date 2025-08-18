@@ -138,6 +138,6 @@ Ubuntu : 10049
 
 ---Troubleshooting reboot---
 
-1. If you get "docker: Error response from daemon: Conflict. The container name "/windows" is already in use by container "#container-name". You have to remove (or rename) that container to be able to reuse that name." copy the container name and do "docker run #container-name"
+1. If you get "docker: Error response from daemon: Conflict. The container name "/windows" is already in use by container "#container-name". You have to remove (or rename) that container to be able to reuse that name." copy the container name and do "docker start #container-name"
 
 REPLACE "#container-name" with your containers real ID
