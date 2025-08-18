@@ -88,7 +88,7 @@ Via Docker CLI : docker run -it --rm --name macos -p 8006:8006 --device=/dev/kvm
 Via Kubernetes : kubectl apply -f https://raw.githubusercontent.com/dockur/macos/refs/heads/master/kubernetes.yml
 
 
-*replace the first 8006 with the specified ports.. 
+**replace the first 8006 with the specified ports.. **
 
 Windows 7  : 10007
 
