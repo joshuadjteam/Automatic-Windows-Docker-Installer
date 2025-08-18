@@ -65,3 +65,73 @@ docker-compose -f docker-compose.yml up -d
 ----------------------Access Your VM
 
 Read README for ports
+
+
+# RUN AFTER REBOOT (updated 2025-08-18)
+
+---WINDOWS---
+
+Via Docker CLI : docker run -it --rm --name windows -p 8006:8006 --device=/dev/kvm --device=/dev/net/tun --cap-add NET_ADMIN -v "${PWD:-.}/windows:/storage" --stop-timeout 120 dockurr/windows
+
+Via Kubernetes : kubectl apply -f https://raw.githubusercontent.com/dockur/windows/refs/heads/master/kubernetes.yml
+
+---Linux
+
+Via Docker CLI : docker run -it --rm --name qemu -e "BOOT=alpine" -p 8006:8006 --device=/dev/kvm --device=/dev/net/tun --cap-add NET_ADMIN -v "${PWD:-.}/qemu:/storage" --stop-timeout 120 qemux/qemu
+
+Via Kubernetes : kubectl apply -f https://raw.githubusercontent.com/qemus/qemu/refs/heads/master/kubernetes.yml
+
+---MAC OS---
+
+Via Docker CLI : docker run -it --rm --name macos -p 8006:8006 --device=/dev/kvm --device=/dev/net/tun --cap-add NET_ADMIN -v "${PWD:-.}/macos:/storage" --stop-timeout 120 dockurr/macos
+
+Via Kubernetes : kubectl apply -f https://raw.githubusercontent.com/dockur/macos/refs/heads/master/kubernetes.yml
+
+
+*replace the first 8006 with the specified ports.. 
+
+Windows 7  : 10007
+
+Windows 8e : 10008
+
+Windows 10 : 10010
+
+Windows 11 : 10011
+
+Windows 2012 : 10012
+
+Windows 2016 : 10016
+
+Windows 2019 : 10019
+
+Windows 2022 : 10022
+
+Windows 2025 : 10025
+
+MacOS 11 : 10511
+
+MacOS 12 : 10512
+
+MacOS 13 : 10513
+
+MacOS 14 : 10514
+
+MacOS 15 : 10515
+
+Alma Linux : 10041
+
+Alpine : 10042
+
+CentOS : 10043
+
+Debian : 10044
+
+Fedora : 10045
+
+Kali Linux : 10046
+
+Linux Mint : 10047
+
+Oracle Linux : 10048
+
+Ubuntu : 10049
