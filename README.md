@@ -175,7 +175,11 @@ For Windows, switch port 3389 on tcp/udp to 3390, 3391, 3392, 3393, 3394, 10000,
 like this...
 
 ports:
+
       - "10011:8006"
+      
       - "3390:3389/tcp"
+      
       - "3390:3389/udp"
+    
     stop_grace_period: 2m
