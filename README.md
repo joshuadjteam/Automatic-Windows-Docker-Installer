@@ -141,3 +141,41 @@ Ubuntu : 10049
 1. If you get "docker: Error response from daemon: Conflict. The container name "/windows" is already in use by container "#container-name". You have to remove (or rename) that container to be able to reuse that name." copy the container name and do "docker start #container-name"
 
 REPLACE "#container-name" with your containers real ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Run 2 or more at one (Debian Linux)
+
+So this is a pre-configured for 1 device.. Due to this you have to do these
+
+1. Select your 2nd, 3rd, or more and select them one by one (if 3 or more)
+
+2. do nano docker-compose.yml
+
+3. edit the "container_name: "Linux/Windows/MacOS" with your Version
+
+i.e. Windows - Windows*version*
+i.e. MacOS - MacOS*version*
+i.e. Linux - *Linux-Version*
+
+For Windows, switch port 3389 on tcp/udp to 3390, 3391, 3392, 3393, 3394, 10000, 10001, 10002, 10003, 10004 
+
+like this...
+
+ports:
+      - "10011:8006"
+      - "3390:3389/tcp"
+      - "3390:3389/udp"
+    stop_grace_period: 2m
