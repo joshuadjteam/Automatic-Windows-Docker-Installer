@@ -143,13 +143,15 @@ Ubuntu : 10049
 REPLACE "#container-name" with your containers real ID
 
 
+# For Windows Docker VM
 
+to add an account add this to enviorment:
 
+      USERNAME: "Admin"
+      
+      PASSWORD: "password"
 
-
-
-
-
+*Switch Admin and Password with your own custom user and password, not manditory and only works with windows
 
 
 
